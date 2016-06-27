@@ -1,0 +1,23 @@
+.title-logo {
+  text-align: center;
+  color: white;
+  font-family: fantasy;
+  font-size: 55px;
+}
+
+.login-form {
+  margin: auto;
+  /*margin-top: 50px;*/
+  text-align: center;
+  border: 2px white solid;
+  width: 28vw;
+  height: 200px;
+  border-radius: 12px;
+}
+
+
+.catch-phrase {
+  text-align: center;
+  color: white;
+  font-family: fantasy;
+}

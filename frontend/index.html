@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="codeclub">
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="A-login/loginStyles.css">
+    <link rel="stylesheet" href="B-signup/signupStyles.css">
+    <link rel="stylesheet" href="C-search/searchStyles.css">
+    <link rel="stylesheet" href="D-fav/favStyles.css">
+    <link rel="stylesheet" href="E-myprobs/myprobsStyles.css">
   </head>
   <body>
-<h1>hey</h1>asdf
+<a ui-sref="login"></a>
+<!-- <a ui-sref="signup"></a> just need it in loginTmpl -->
+
+
+
+<div ui-view>
+</div>
+
+<!-- script tags -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<!-- <script src=""></script> -->
+<!-- <script src=""></script> -->
+
   </body>
 </html>
