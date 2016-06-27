@@ -1,6 +1,8 @@
 angular.module('codeclub', ['ui.router'])
 .config(function ($stateProvider, $urlRouterProvider) {
 
+// add controllers ...
+
 $stateProvider
 .state('login', {
   url: '/login',
@@ -10,10 +12,11 @@ $stateProvider
   url: '/signup',
   templateUrl: 'B-signup/signupTmpl.html'
 })
-
+// from here below is the actual app
 .state('search', {
   url: '/search',
-  templateUrl: 'C-search/searchTmpl.html'
+  templateUrl: 'C-search/searchTmpl.html',
+  controller: 'searchCtrl'
 })
 .state('fav', {
   url: '/fav',
@@ -22,6 +25,10 @@ $stateProvider
 .state('myprobs', {
   url: '/myprobs',
   templateUrl: 'E-myprobs/myprobsTmpl.html'
+})
+.state('account', {
+  url: '/account',
+  templateUrl: 'F-account/accountTmpl.html'
 })
 
 
