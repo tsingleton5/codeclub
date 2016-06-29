@@ -12,17 +12,38 @@ body {
 
 .main-routes-container li {
   list-style-type: none;
-  color: white;
   margin: 20px;
+  /*width: 20px;*/
 }
 
 .main-routes {
   color: white;
   text-decoration: none;
   font-family: fantasy;
-  font-size: 35px;
+  font-size: 2em;
 }
 
 .main-routes:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 615px) {
+  .main-routes-container {
+    display: block;
+    text-align: center;
+    /*border-bottom: 2px black solid;*/
+  }
+  svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  svg {
+    display: none;
+  }
+}
+
+
+
 }

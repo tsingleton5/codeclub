@@ -24,7 +24,8 @@ $stateProvider
 })
 .state('myprobs', {
   url: '/myprobs',
-  templateUrl: 'E-myprobs/myprobsTmpl.html'
+  templateUrl: 'E-myprobs/myprobsTmpl.html',
+  controller: 'myprobsCtrl'
 })
 .state('account', {
   url: '/account',

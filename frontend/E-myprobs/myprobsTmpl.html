@@ -1,5 +1,21 @@
 <navbar></navbar>
 
 <section class="myprobsView">
- MINE
+ MINE - THIS WILL BE WHERE YOU POST ONE
+ <input type="input" name="name" value="">
+<br> <br> <br> <br>
+ <hr>
+<br> <br> <br> <br> <br>
+THIS DISPLAYS ALL OF YOUR PROBLEMS HERE
+
+<div ng-repeat="val in problems">
+    <p>Title: {{val.title}}</p>
+    <p>Creator: {{val.creator}}</p>
+<br>
+Definition: {{val.definition}} <br>
+Solution: {{val.solution}}
+
+    difficulty: {{val.difficulty}}
+</div>
+
 </section>

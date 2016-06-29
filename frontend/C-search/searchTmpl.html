@@ -1,6 +1,26 @@
 <navbar></navbar>
 
 <section class="searchView">
-hey
-{{test}}
+
+  <input ng-model="problemFilter" class="inputSearchProblems" placeholder="">
+  <input>
+  <!-- one input could filter user and another could do title of problem to get it down to a t -->
+  <br><br>
+
+<div ng-repeat="val in problems | filter: problemFilter" class="problem-layout-template">
+
+  <div class="top-template-problem">
+    <p class="problem-title">Title: {{val.title}}</p>
+    <p class="problem-creator">Creator: {{val.creator.username}}</p>
+  </div>
+<br>
+Definition: {{val.definition}} <br>
+Solution: {{val.solution}}
+
+  <div class="problem-difficulty">
+    difficulty: {{val.difficulty}}
+  </div>
+
+</div>
+
 </section>

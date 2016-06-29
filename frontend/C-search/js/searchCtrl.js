@@ -1,3 +1,8 @@
-angular.module('codeclub').controller('searchCtrl', function ($scope) { //add service
-  $scope.test = "TESTING";
+angular.module('codeclub').controller('searchCtrl', function ($scope, searchService) { //add service
+
+searchService.getProblems()
+.then(function (response) {
+  $scope.problems = response;
+})
+
 })

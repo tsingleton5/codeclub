@@ -1,0 +1,28 @@
+{
+  "name": "codeclub",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsingleton5/codeclub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsingleton5/codeclub/issues"
+  },
+  "homepage": "https://github.com/tsingleton5/codeclub#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.5.2",
+    "passport": "^0.3.2"
+  }
+}
