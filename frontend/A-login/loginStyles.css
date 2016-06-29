@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
 .title-logo {
   text-align: center;
   color: white;
@@ -10,14 +12,45 @@
   /*margin-top: 50px;*/
   text-align: center;
   border: 2px white solid;
-  width: 28vw;
-  height: 200px;
+  width: 32vw;
+  height: 220px;
   border-radius: 12px;
 }
 
+.username-input {
+  width: 60%;
+  display: block;
+  margin: 20px auto;
+}
+
+.password-input {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
 
 .catch-phrase {
   text-align: center;
   color: white;
-  font-family: fantasy;
+  font-family: Shadows Into Light;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 705px) {
+  .login-form {
+    width: 60vw;
+    height: 220px;
+  }
+}
+
+.login-redirect-signup {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  font-style: oblique;
+}
+
+.login-redirect-signup a {
+  color: red;
 }

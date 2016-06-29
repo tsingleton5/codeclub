@@ -1,21 +1,37 @@
 <navbar></navbar>
 
+
+
+
 <section class="myprobsView">
  MINE - THIS WILL BE WHERE YOU POST ONE
- <input type="input" name="name" value="">
+<form ng-submit="addProblem(problem)">
+
+ <input type="input" ng-model="problem.title" placeholder="title">
+ <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> <!-- will be 3 options dropdown -->
+ <input type="input" ng-model="problem.definition" placeholder="definition">
+ <input type="input" ng-model="problem.solution" placeholder="solution">
+<button type="submit">Add new Problem</button>
+</form>
+
 <br> <br> <br> <br>
  <hr>
 <br> <br> <br> <br> <br>
 THIS DISPLAYS ALL OF YOUR PROBLEMS HERE
+<h2 style="text-align: center;">My Problems</h2>
 
 <div ng-repeat="val in problems">
     <p>Title: {{val.title}}</p>
-    <p>Creator: {{val.creator}}</p>
+    <p>Creator: ME</p>
+    <!-- {{val.creator}} -->
 <br>
 Definition: {{val.definition}} <br>
-Solution: {{val.solution}}
+Solution: {{val.solution}} <br>
 
     difficulty: {{val.difficulty}}
+    <br>
+    <hr>
+    <br>
 </div>
 
 </section>

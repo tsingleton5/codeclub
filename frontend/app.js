@@ -6,11 +6,13 @@ angular.module('codeclub', ['ui.router'])
 $stateProvider
 .state('login', {
   url: '/login',
-  templateUrl: 'A-login/loginTmpl.html'
+  templateUrl: 'A-login/loginTmpl.html',
+  controller: 'loginCtrl'
 })
 .state('signup', {
   url: '/signup',
-  templateUrl: 'B-signup/signupTmpl.html'
+  templateUrl: 'B-signup/signupTmpl.html',
+  controller: 'signupCtrl'
 })
 // from here below is the actual app
 .state('search', {
@@ -29,7 +31,21 @@ $stateProvider
 })
 .state('account', {
   url: '/account',
-  templateUrl: 'F-account/accountTmpl.html'
+  templateUrl: 'F-account/accountTmpl.html',
+  controller: 'accountCtrl',
+  resolve: {
+    user: function (authService, $state) {
+      return authService.getCurrentUser().then(function (response) {
+        if(!response.data) {
+          $state.go('login')
+        }
+        return response.data;
+      }).catch(function (error) {
+        $state.go('login');
+      })
+    }
+  }
+
 })
 
 

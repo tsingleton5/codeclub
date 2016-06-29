@@ -4,15 +4,17 @@
    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
 
-<form class="login-form" action="index.html" method="post">
-<!-- <input name="name" value="" placeholder="Username">
-<input name="name" value="" placeholder="Password"> -->
+<form class="login-form" ng-submit="login(user)">
+Username: <input ng-model="user.username" type="text" class="username-input" placeholder="username" required/>
+Password: <input ng-model="user.password" type="password" class="password-input" placeholder="password" required/>
+<button type="submit">Login</button>
 </form>
 
 
- <br> <br> <br> <br>
-Don't have an account? <a ui-sref="signup">Sign Up</a>
 
-<!-- <p class="catch-phrase">
+ <br> <br> <br> <br>
+<p class="login-redirect-signup">Don't have an account? <a ui-sref="signup">Sign Up</a></p>
+
+<p class="catch-phrase">
   Share powerful code snippets <br> that do incredible things
-</p> -->
+</p>

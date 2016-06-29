@@ -6,7 +6,7 @@ this.getProblems = function () {
     url: '/search'
   })
   .then(function (response) {
-    console.log(response);
+    //console.log(response);
     return response.data;
   })
 }
