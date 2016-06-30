@@ -1,5 +1,6 @@
 <navbar></navbar>
 
+<h2>Account Information</h2>
 
 Name: {{user.name}} <br>
 Username: {{user.username}} <br>
@@ -8,5 +9,19 @@ Bio: {{user.bio}}
 
 <br> <br> <br>
 
-add a bio
-<input>
+<form ng-submit="updateUserInfo(userObj)" class="account-form">
+
+<input ng-model="userObj.name" placeholder="name">
+<input ng-model="userObj.username" placeholder="username">
+<input ng-model="userObj.bio" placeholder="bio">
+<button type="submit">Update info</button>
+
+</form>
+
+
+<br> <br> <br> <br> <br> Update Password
+
+<form ng-submit="updateUserInfo(userObj)">
+  <input ng-model="userObj.password" placeholder="password">
+  <button type="submit"></button>
+</form>

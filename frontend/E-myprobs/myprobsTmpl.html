@@ -8,7 +8,12 @@
 <form ng-submit="addProblem(problem)">
 
  <input type="input" ng-model="problem.title" placeholder="title">
- <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> <!-- will be 3 options dropdown -->
+ <select ng-model="problem.difficulty">
+  <option value="beginner">Beginner</option>
+  <option value="intermediate">Intermediate</option>
+  <option value="advanced">Advanced</option>
+ </select>
+ <!-- <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> -->
  <input type="input" ng-model="problem.definition" placeholder="definition">
  <input type="input" ng-model="problem.solution" placeholder="solution">
 <button type="submit">Add new Problem</button>
@@ -28,7 +33,23 @@ THIS DISPLAYS ALL OF YOUR PROBLEMS HERE
 Definition: {{val.definition}} <br>
 Solution: {{val.solution}} <br>
 
-    difficulty: {{val.difficulty}}
+    Difficulty: {{val.difficulty}} <br>
+    <form ng-sumbit="editProblem(val)">
+      <input type="input" ng-model="val.title" placeholder="title">
+      <select ng-model="val.difficulty">
+       <option value="beginner">Beginner</option>
+       <option value="intermediate">Intermediate</option>
+       <option value="advanced">Advanced</option>
+      </select>
+      <!-- <input type="input" ng-model="val.difficulty" placeholder="difficulty"> -->
+      <input type="input" ng-model="val.definition" placeholder="definition">
+      <input type="input" ng-model="val.solution" placeholder="solution">
+      <button type="submit" ng-click="editProblem(val)">Edit Problem</button>
+      <!-- <button type="submit">Edit Problem</button> -->
+      <!-- <button type="button or sumbit" ng-click="editProblem(val)">Edit Problem</button> both work now -->
+
+      <button ng-click="deleteProblem(val._id)">Delete Problem</button>
+       </form>
     <br>
     <hr>
     <br>

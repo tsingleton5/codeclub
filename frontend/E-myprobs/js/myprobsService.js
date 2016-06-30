@@ -7,7 +7,7 @@ this.getUserProblems = function () {
     url: '/myprobs'
   })
   .then(function (response) {
-    console.log(response);
+    // console.log(response);
     return response.data;
   })
 }
@@ -25,6 +25,34 @@ this.createNewProblem = function (prob) {
     return response.data;
   })
 }
+
+
+this.editProblem = function (problem) {
+  console.log('hit');
+  return $http({
+    method: 'PUT',
+    url: '/myprobs',
+    data: problem
+  })
+  .then(function (response) {
+    return response.data;
+  })
+}
+
+
+this.deleteProblem = function (id) {
+  console.log('delete ser');
+  return $http({
+    method: 'DELETE',
+    url: '/myprobs/' + id
+  })
+  .then(function (response) {
+    return response.data;
+  })
+}
+
+
+
 
 //ending
 })

@@ -35,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
 //<auth
 
 app.post('/signup', UserCtrl.register); //sign up
@@ -78,11 +79,20 @@ app.get('/myprobs', isAuthed, myprobsEP.findUsersProbs);
 //  User.findById(req.params.userid, function (error, response) {
 
 
+//add is authend when done
+app.put('/myprobs', myprobsEP.editProblem);
+
+app.delete('/myprobs/:id', myprobsEP.deleteProblem);
+
+
+
+
+
 //account
 
-app.put('/account/:id', function (req, res) {
+app.put('/account', isAuthed, function (req, res) {
   console.log(req.body);
-  User.findById(req.params.id, function (err, user) {
+  User.findById(req.user._id, function (err, user) {
     if (err) {
       return res.status(500).send(err);
     }

@@ -18,8 +18,13 @@ var userSchema = new Schema({
   },
   bio: {
     type: String
-  }
+  },
+  favorites: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Product'
+  }]
 })
+//favorites: [problems]
 
 userSchema.pre('save', function (next) {
   var user = this
@@ -35,7 +40,6 @@ userSchema.methods.verifyPassword = function (reqBodyPassword) {
   var user = this;
   return bcrypt.compareSync(reqBodyPassword, user.password)
 };
-
 
 
 
