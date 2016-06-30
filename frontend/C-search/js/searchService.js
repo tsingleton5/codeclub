@@ -11,4 +11,18 @@ this.getProblems = function () {
   })
 }
 // this.getProblems();
+
+this.addFavProb = function (problem) {
+  console.log(problem);
+  return $http({
+    method: 'PUT',
+    url: '/fav',
+    data: {favorite: problem} // expecting an object not a primitive 
+  })
+  .then(function (response) {
+    return response.data;
+  })
+}
+
+//ending
 })

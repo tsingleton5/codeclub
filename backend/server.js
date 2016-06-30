@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var config = require('./config.json');
 var endpointCtrl = require('./controllers/endpoint.js');
 var myprobsEP = require('./controllers/myprobsEndpoints.js');
+var favEP = require('./controllers/favEndpoints.js');
 var Problem = require('./schemas/Problem.js');
 var User = require('./schemas/User.js')
 
@@ -66,7 +67,13 @@ app.get('/logout', function (req, res) {
 app.get('/search', endpointCtrl.index);
 
 
-//fav
+//start fav
+
+app.put('/fav', favEP.newLike);
+
+
+//end fav
+
 
 //myprobs
 //creates a problem to that user passed in /userid

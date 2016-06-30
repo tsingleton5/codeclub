@@ -2,7 +2,7 @@
 
 <section class="searchView">
 
-  <input ng-model="problemFilter" class="inputSearchProblems" placeholder="">
+  <input ng-model="problemFilter" class="inputSearchProblems" placeholder="Search anything">
   <input>
   <!-- one input could filter user and another could do title of problem to get it down to a t -->
   <br><br>
@@ -20,6 +20,8 @@ Solution: {{val.solution}}
   <div class="problem-difficulty">
     difficulty: {{val.difficulty}}
   </div>
+
+  <button ng-click="addFavProblem(val._id)">Like</button>
 
 </div>
 

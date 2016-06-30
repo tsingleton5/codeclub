@@ -21,7 +21,8 @@ var userSchema = new Schema({
   },
   favorites: [{
     type: Schema.Types.ObjectId,
-    ref: 'Product'
+    ref: 'Product',
+    unique: true 
   }]
 })
 //favorites: [problems]

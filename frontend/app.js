@@ -22,7 +22,8 @@ $stateProvider
 })
 .state('fav', {
   url: '/fav',
-  templateUrl: 'D-fav/favTmpl.html'
+  templateUrl: 'D-fav/favTmpl.html',
+  controller: 'favCtrl'
 })
 .state('myprobs', {
   url: '/myprobs',

@@ -2,4 +2,22 @@
 
 <section class="favView">
 
+  <div ng-repeat="liked in problems | filter: problemFilter" class="problem-layout-template">
+
+    <div class="top-template-problem">
+      <p class="problem-title">Title: {{liked.title}}</p>
+      <p class="problem-creator">Creator: {{liked.creator.username}}</p>
+    </div>
+  <br>
+  Definition: {{liked.definition}} <br>
+  Solution: {{liked.solution}}
+
+    <div class="problem-difficulty">
+      difficulty: {{liked.difficulty}}
+    </div>
+
+  </div>
+
+
+
 </section>
