@@ -24,6 +24,7 @@ mongoose.connect('mongodb://localhost/codeclub');
 
 var app = express();
 
+// app.use(express.bodyParser());
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + './../frontend'));
@@ -40,7 +41,7 @@ app.use(passport.session());
 //<auth
 
 app.post('/signup', UserCtrl.register); //sign up
-app.get('/me', isAuthed, UserCtrl.me); //gets the current user object
+app.get('/me', UserCtrl.me); //gets the current user object
 app.put('/users/:_id', isAuthed, UserCtrl.update); // needed to update user info
 
 app.post('/login', passport.authenticate('local', {
@@ -70,6 +71,7 @@ app.get('/search', endpointCtrl.index);
 //start fav
 
 app.put('/fav', favEP.newLike);
+app.post('/fav', favEP.getFavorites);
 
 
 //end fav

@@ -1,8 +1,16 @@
 <navbar></navbar>
 
 <section class="favView">
+  <h2>My favorite Problems</h2>
 
-  <div ng-repeat="liked in problems | filter: problemFilter" class="problem-layout-template">
+
+{{favorites}}
+
+<!-- <div ng-repeat="info in favorites">
+  {{info.title}}
+</div> -->
+
+  <!-- <div ng-repeat="liked in problems | filter: problemFilter" class="problem-layout-template">
 
     <div class="top-template-problem">
       <p class="problem-title">Title: {{liked.title}}</p>
@@ -14,9 +22,9 @@
 
     <div class="problem-difficulty">
       difficulty: {{liked.difficulty}}
-    </div>
+    </div> -->
 
-  </div>
+
 
 
 

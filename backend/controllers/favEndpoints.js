@@ -10,7 +10,20 @@ module.exports = {
        }
        return res.status(200).json(response);
      })
+  },
+
+  getFavorites: function (req, res) {
+    console.log(req.body, 'favsss');
+    Problem.find({_id: {$in: req.body.fav}}, function (error, response) {
+      console.log(response);
+      console.log(error, 'error');
+      if (error) {
+        return res.status(500).send(error);
+      }
+      return res.status(200).json(response);
+    })
   }
+
 }
 //updates with req.body.favorite thing and pushes it by $push
 //req.params.id if your doing a :id - req.user._id is whoever is logged in so postman wouldn't do that

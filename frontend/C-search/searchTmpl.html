@@ -2,27 +2,42 @@
 
 <section class="searchView">
 
-  <input ng-model="problemFilter" class="inputSearchProblems" placeholder="Search anything">
-  <input>
-  <!-- one input could filter user and another could do title of problem to get it down to a t -->
-  <br><br>
-
-<div ng-repeat="val in problems | filter: problemFilter" class="problem-layout-template">
-
-  <div class="top-template-problem">
-    <p class="problem-title">Title: {{val.title}}</p>
-    <p class="problem-creator">Creator: {{val.creator.username}}</p>
-  </div>
-<br>
-Definition: {{val.definition}} <br>
-Solution: {{val.solution}}
-
-  <div class="problem-difficulty">
-    difficulty: {{val.difficulty}}
+  <div class="search-input-container">
+    <input ng-model="problemFilter" class="input-for-searching-problems" placeholder="Search anything">
+    <!-- <select class="search-select-box" name="">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select> -->
   </div>
 
-  <button ng-click="addFavProblem(val._id)">Like</button>
+  <br>
+  <br>
+  <br>
 
-</div>
+  <div ng-repeat="val in problems | filter: problemFilter" class="problem-template-card-container">
+
+    <div class="problem-template-card">
+      Title: {{val.title}} <br>
+       Creator: {{val.creator.username}} <br>
+        Definition: {{val.definition}} <br>
+         Solution: {{val.solution}} <br>
+          difficulty: {{val.difficulty}} <br>
+      <button ng-click="addFavProblem(val._id)">Like</button>
+      <br> <br> <br> <br> <br> <br>
+    </div>
+
+
+
+  </div>
 
 </section>
+
+
+
+
+
+
+
+
+<!--  comment w/ input earlier-one input could filter user and another could do title of problem to get it down to a t -->

@@ -23,7 +23,19 @@ $stateProvider
 .state('fav', {
   url: '/fav',
   templateUrl: 'D-fav/favTmpl.html',
-  controller: 'favCtrl'
+  controller: 'favCtrl',
+  resolve: {
+    user: function (authService, $state) {
+      return authService.getCurrentUser().then(function (response) {
+        if(!response.data) {
+          $state.go('login')
+        }
+        return response.data;
+      }).catch(function (error) {
+        $state.go('login');
+      })
+    }
+  }
 })
 .state('myprobs', {
   url: '/myprobs',

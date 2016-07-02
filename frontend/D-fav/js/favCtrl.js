@@ -1,26 +1,33 @@
-angular.module("codeclub").controller("favCtrl", function($scope, searchService) {
+angular.module("codeclub").controller("favCtrl", function($scope, favService, user) {
 
 
-  searchService.getProblems()
-  .then(function (response) {
-    $scope.problems = response;
+$scope.getProblems = function () {
+  console.log(user.favorites);
+  favService.getFavProbs(user.favorites).then(function (response) {
+    console.log(response);
+    $scope.favorites = response;
   })
+}
+$scope.getProblems();
 
 
-  //%
-  $scope.getRefreshedProblems = function functionName() {
-  searchService.getProblems()
-  .then(function (response) {
-    $scope.problems = response;
-  })
-  }
-  //%
+// $scope.displayFavs = searchService.addFavProb(problem);
 
 
-  $scope.addFavProblem = function (problem) {
-    searchService.addFavProb(problem).then(function (response) {
-      $scope.liked = response;
-    })
-  }
+// searchService.addFavProb(problem).then(function (response) {
+//   $scope.liked = response;
+// })
+
+  // $scope.addFavProblem = function ({favorite: problem}) {
+  //   console.log({favorite: problem});
+  //   searchService.addFavProb({favorite: problem}).then(function (response) {
+  //     $scope.liked = response;
+  //   })
+  // }
+
+
+
+
+
 
 });

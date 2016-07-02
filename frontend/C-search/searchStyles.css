@@ -4,54 +4,58 @@
   height: 90%;
 }
 
-.inputSearchProblems {
-  text-align: center;
-  margin-left: 200px;
-}
-
-.problem-layout-template {
-  text-align: center;
-  border: 2px solid #5cf58b;
-  border-radius: 7px;
-  width: 60vw;
-  height: 50vh;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
-.top-template-problem {
+.search-input-container {
+  /*border: 2px red solid;*/
   display: flex;
-  justify-content: space-between;
+  /*justify-content: center;*/
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
 }
 
-.problem-title {
-  margin-top: 5px;
-  margin-left: 5px;
-  /*font-family: fantasy;*/
-}
-.problem-creator {
-  margin-top: 5px;
-  margin-right: 10px;
-  /*font-family: fantasy;*/
-}
-
-/*.problem-layout-template .problem-title {
-  text-align: left;
+.input-for-searching-problems {
+  border-radius: 20px;
+  outline: none;
+  border: 2px #FFA971 solid;
+  width: 60vw;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
 }
 
-.problem-layout-template .problem-difficulty {
-  margin-bottom: 0px;
-}*/
-
-.problem-difficulty {
-  /*position: absolute;
-  bottom: 0;*/
+.search-select-box {
+  width: 100px;
 }
 
 
+.problem-template-card-container {
+  display: inline-block;
+  width: 100vw;
+}
+
+.problem-template-card {
+  margin-left: 400px;
+  height: 30px;
+  /*border: black 2px dashed;*/
+  display: inline-block;
+  text-align: center;
+}
 
 
-@media screen and (max-width: 615px) {
-  .problem-layout-template {
-    width: 80vw;
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 615px) {
+    .input-for-searching-problems {
+      width: 8l0vw;
+    }
+
+/*@media screen and (max-width: 615px) {
+  .search-select-box {
+    width: 50vw;
   }
+}*/

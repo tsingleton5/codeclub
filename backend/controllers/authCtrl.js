@@ -16,6 +16,7 @@ module.exports = {
     if (!req.user) {
       return res.status(401).send('current user not defined');
     }
+    // console.log(req.user);
     req.user.password = null;
     return res.status(200).json(req.user);
   },
