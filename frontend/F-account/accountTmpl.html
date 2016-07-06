@@ -1,5 +1,8 @@
 <navbar></navbar>
 
+<section class="accountView">
+
+
 <h2>Account Information</h2>
 
 Name: {{user.name}} <br>
@@ -11,9 +14,9 @@ Bio: {{user.bio}}
 
 <form ng-submit="updateUserInfo(userObj)" class="account-form">
 
-<input ng-model="userObj.name" placeholder="name">
-<input ng-model="userObj.username" placeholder="username">
-<input ng-model="userObj.bio" placeholder="bio"> 
+<input ng-model="userObj.name" placeholder="name" class="account-info">
+<input ng-model="userObj.username" placeholder="username" class="account-info">
+<textarea ng-model="userObj.bio" placeholder="bio" class="account-info-bio">
 <button type="submit">Update info</button>
 
 </form>
@@ -25,3 +28,4 @@ Bio: {{user.bio}}
   <input ng-model="userObj.password" placeholder="password">
   <button type="submit"></button>
 </form> -->
+</section>

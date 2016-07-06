@@ -4,10 +4,16 @@ body {
 }
 
 .main-routes-container {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 90px;
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   /*border: 3px solid blue;*/
-  /*background-color: #5cf58b;*/
+  background-color: #5cf58b;
+  margin-bottom: 90px;
 }
 
 .main-routes-container li {

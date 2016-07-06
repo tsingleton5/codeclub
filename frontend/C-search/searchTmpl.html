@@ -9,30 +9,39 @@
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
     </select> -->
+    <select class="s" name="">
+
+    </select>
   </div>
+  <!-- date-difficulty-user -->
 
   <br>
   <br>
   <br>
 
-  <div ng-repeat="val in problems | filter: problemFilter" class="problem-template-card-container">
+  <div class="problem-card-container">
 
-    <div class="problem-template-card">
-      Title: {{val.title}} <br>
-       Creator: {{val.creator.username}} <br>
-        Definition: {{val.definition}} <br>
-         Solution: {{val.solution}} <br>
-          difficulty: {{val.difficulty}} <br>
-      <button ng-click="addFavProblem(val._id)">Like</button>
-      <br> <br> <br> <br> <br> <br>
+    <div ng-repeat="val in problems | filter: problemFilter" class="problem-template-card">
+      <h2>{{val.title}}</h2>
+      <h3>created by: {{val.creator.username}}</h3>
+      <h4>difficulty: {{val.difficulty}}</h4>
+      <i class="fa fa-heart-o heart-on-probs" aria-hidden="true" ng-click="addFavProblem(val._id)"></i>
+        <div class="definition-in-card">
+            Problem...
+            <div>{{val.definition}}</div>
+        </div>
+
+<button type="button" name="button" class="solution-button">Solution</button>
+         <!-- Solution: {{val.solution}} <br> -->
     </div>
-
-
-
+ <!-- animated rubberBand -->
   </div>
 
 </section>
+<!-- animated rubberBand on ng-repeat class -->
 
+
+<!-- <button ng-click="addFavProblem(val._id)">Heart</button> <br> -->
 
 
 

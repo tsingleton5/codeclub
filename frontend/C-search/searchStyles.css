@@ -1,14 +1,19 @@
 .searchView {
-  background: white;
+  background: #f1f1f1;
   width: 100vw;
   height: 90%;
+  margin-top: 90px;
+}
+
+.s {
+  width: 50px;
 }
 
 .search-input-container {
   /*border: 2px red solid;*/
   display: flex;
-  /*justify-content: center;*/
-  flex-direction: column;
+  justify-content: center;
+  /*flex-direction: column;*/
   /*flex-wrap: wrap;*/
 }
 
@@ -22,24 +27,89 @@
   margin: 10px;
 }
 
-.search-select-box {
+/*.search-select-box {
   width: 100px;
-}
+}*/
 
+/*start*/
 
-.problem-template-card-container {
-  display: inline-block;
-  width: 100vw;
+.problem-card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 40px;
+  width: 80vw;
 }
 
 .problem-template-card {
-  margin-left: 400px;
-  height: 30px;
-  /*border: black 2px dashed;*/
-  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background: lightblue;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.problem-template-card h2 {
+  margin: auto;
   text-align: center;
 }
 
+.problem-template-card h3 {
+  margin: auto;
+  text-align: center;
+}
+
+.problem-template-card h4 {
+  margin: auto;
+  text-align: center;
+}
+
+.problem-template-card .heart-on-probs {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+
+.definition-in-card {
+  overflow: scroll;
+  /*border: 2px blue dashed;*/
+  /*width: 100%;*/
+  padding: 12px;
+}
+
+.definition-in-card div {
+  height: 100px;
+  word-break: break-all;
+}
+
+.solution-button {
+  position: absolute;
+  bottom: 10px;
+  margin-left: 40%;
+}
+
+
+/*section {
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background: red;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  position: relative;
+}*/
 
 
 
@@ -49,10 +119,10 @@
 
 
 
-  @media screen and (max-width: 615px) {
+  /*@media screen and (max-width: 615px) {
     .input-for-searching-problems {
       width: 8l0vw;
-    }
+    }*/
 
 /*@media screen and (max-width: 615px) {
   .search-select-box {

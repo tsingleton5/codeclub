@@ -1,6 +1,20 @@
-.account-form {
-  display: flex;
-  /*flex-direction: ;*/
-  /*justify-content: center;*/
-  /*width: 900px;*/
+.accountView {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 90px;
+}
+
+
+.account-info {
+
+}
+
+.account-info-bio {
+
+}
+
+
+.account-game-container {
+  
 }
