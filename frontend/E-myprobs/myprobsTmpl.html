@@ -4,55 +4,88 @@
 
 
 <section class="myprobsView">
- MINE - THIS WILL BE WHERE YOU POST ONE
-<form ng-submit="addProblem(problem)">
+  MINE - THIS WILL BE WHERE YOU POST ONE
+  <form ng-submit="addProblem(problem)">
 
- <input type="input" ng-model="problem.title" placeholder="title">
- <select ng-model="problem.difficulty">
-  <option value="beginner">Beginner</option>
-  <option value="intermediate">Intermediate</option>
-  <option value="advanced">Advanced</option>
- </select>
- <!-- <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> -->
- <input type="input" ng-model="problem.definition" placeholder="definition">
- <textarea type="input" ng-model="problem.solution" cols="20" rows="5" ng-trim="false"></textarea>
-<button type="submit">Add new Problem</button>
-</form>
+    <input type="input" ng-model="problem.title" placeholder="title">
+    <select ng-model="problem.difficulty">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+    <!-- <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> -->
+    <input type="input" ng-model="problem.definition" placeholder="definition">
+    <textarea type="input" ng-model="problem.solution" cols="20" rows="5" ng-trim="false"></textarea>
+    <button type="submit">Add new Problem</button>
+  </form>
 
-<br> <br> <br> <br>
- <hr>
-<br> <br> <br> <br> <br>
-THIS DISPLAYS ALL OF YOUR PROBLEMS HERE
-<h2 style="text-align: center;">My Problems</h2>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <hr>
 
-<div ng-repeat="val in problems">
-    <p>Title: {{val.title}}</p>
-    <p>Creator: ME</p>
-    <!-- {{val.creator}} -->
-<br>
-Definition: {{val.definition}} <br>
-Solution: {{val.solution}} <br>
+  <!-- modal -->
+  <div class="modal-cont" ng-if="modalOn">
+      <div class="modal-back favorite-modal-back" ng-click="turnOff()">
+      </div>
+      <div class="modal-box animated fadeInDown">
+        <i class="fa fa-times" aria-hidden="true" ng-click="turnOff()"></i>
+        <h2 id="sol-title">Solution</h2>
+        <br> <br>
+        <div class="solution-in-box">
+          <pre>{{problem.solution}}</pre>
+        </div>
+      </div>
+  </div>
+  <!-- //modal -->
 
-    Difficulty: {{val.difficulty}} <br>
-    <form ng-sumbit="editProblem(val)">
-      <input type="input" ng-model="val.title" placeholder="title">
-      <select ng-model="val.difficulty">
-       <option value="beginner">Beginner</option>
-       <option value="intermediate">Intermediate</option>
-       <option value="advanced">Advanced</option>
-      </select>
-      <!-- <input type="input" ng-model="val.difficulty" placeholder="difficulty"> -->
-      <input type="input" ng-model="val.definition" placeholder="definition">
-      <input type="input" ng-model="val.solution" placeholder="solution">
-      <button type="submit" ng-click="editProblem(val)">Edit Problem</button>
-      <!-- <button type="submit">Edit Problem</button> -->
+  <h1 style="text-align: center;">My Problems</h1>
+
+
+  <section class="problem-card-container myprobs-container">
+
+    <div ng-repeat="val in problems" class="problem-template-card myprobs-higher-form">
+      <h2>{{val.title}}</h2>
+      <h3>Creator: yours truly</h3>
+      <h4>difficulty: {{val.difficulty}}</h4>
+      <i class="fa fa-user heart-on-probs star-favorites" aria-hidden="true"></i>
+      <div class="definition-in-card">
+        Problem...
+        <div>{{val.definition}}
+        </div>
+      </div>
+      <button type="button" name="button" class="solution-button" ng-click = "openModal(val)">Solution</button>
+
+      <form ng-sumbit="editProblem(val)">
+        <i class="fa fa-pencil edit-problem-icon" aria-hidden="true" ng-click="editProblem(val)"></i>
+        <!-- <button type="submit" ng-click="editProblem(val)">Edit Problem</button> --> <br>
+        <input type="input" ng-model="val.title" placeholder="title *required">
+        <select ng-model="val.difficulty">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+        <input type="input" ng-model="val.definition" placeholder="definition">
+        <input type="input" ng-model="val.solution" placeholder="solution">
+
+        <button ng-click="deleteProblem(val._id)" style="background: red;">Delete Problem</button>
+
+      </form>
       <!-- <button type="button or sumbit" ng-click="editProblem(val)">Edit Problem</button> both work now -->
+<hr> <br> <br>
+      <!-- <br>
+      <hr>
+      <br> -->
+    </div>
 
-      <button ng-click="deleteProblem(val._id)" style="background: red;">Delete Problem</button>
-       </form>
-    <br>
-    <hr>
-    <br>
-</div>
+  </section>
 
+
+
+
+
+
+  <!-- view end -->
 </section>

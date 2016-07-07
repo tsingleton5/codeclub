@@ -5,8 +5,9 @@
   margin-top: 90px;
 }
 
-.favView h2 {
+.favView h1 {
   text-align: center;
+  /*margin-left: 22%;*/
 }
 
 /*container*/
@@ -31,7 +32,23 @@ width: 80vw;*/
 }
 
 
+.quotes-section {
+  border: 2px red dashed;
+}
+
+
 @media screen and (max-width: 768px) {
-   .input-for-searching-problems {
-      width: 60vw;
+.favorite-container {
+  width: 80vw;
+  margin: auto;
   }
+
+  /*@media screen and (min-width: 768px) {
+  .favView h1 {
+    text-align: center;
+    }*/
+
+
+
+  /*on 769 width Ill still have cat quotes*/
+  /*then lower than that theyll have display none*/

@@ -1,5 +1,8 @@
 angular.module('codeclub').controller('myprobsCtrl', function ($scope, myprobsService) {
 
+  $scope.modalOn = false;
+
+
 $scope.getProblems = function () {
 myprobsService.getUserProblems()
 .then(function (response) {
@@ -37,6 +40,21 @@ $scope.deleteProblem = function (id) {
     $scope.getProblems();
   })
 }
+
+
+$scope.turnOff = function () {
+  $scope.modalOn = false;
+}
+
+
+$scope.openModal = function (problem) {
+  $scope.problem = problem;
+  $scope.modalOn = true;
+
+}
+
+
+
 
 //ending
 })
