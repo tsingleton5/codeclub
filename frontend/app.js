@@ -1,4 +1,4 @@
-angular.module('codeclub', ['ui.router'])
+angular.module('codeclub', ['ui.router', 'angularModalService'])
 .config(function ($stateProvider, $urlRouterProvider) {
 
 // add controllers ...

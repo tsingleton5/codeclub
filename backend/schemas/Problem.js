@@ -26,7 +26,8 @@ var problemSchema = new Schema({
   solution: {
     type: String,
     required: true
-  }
+  },
+  created: {type: Date, default: new Date()}
 })
 
 module.exports = mongoose.model('Problem', problemSchema);

@@ -1,8 +1,10 @@
 body {
-  background-color: #5cf58b;
+  background-color: #4ECDC4
+;
   margin: 0 auto;
 }
-
+/*#4ECDC4
+#C7F464*/
 .main-routes-container {
   position: fixed;
   top: 0px;
@@ -12,7 +14,7 @@ body {
   display: flex;
   justify-content: space-around;
   /*border: 3px solid blue;*/
-  background-color: #5cf58b;
+  background-color: #4ECDC4;
   margin-bottom: 90px;
 }
 
@@ -36,6 +38,8 @@ body {
 @media screen and (max-width: 615px) {
   .main-routes-container {
     display: block;
+    position: relative;
+    height: 180px;
     text-align: center;
     /*border-bottom: 2px black solid;*/
   }
@@ -50,6 +54,20 @@ body {
   }
 }
 
-
-
 }
+
+
+/*5cf58b*/
+
+
+
+.modal-tmpl {
+  border: red dashed 2px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+
+/*modal styling*/

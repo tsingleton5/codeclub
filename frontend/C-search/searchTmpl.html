@@ -3,39 +3,67 @@
 <section class="searchView">
 
   <div class="search-input-container">
-    <input ng-model="problemFilter" class="input-for-searching-problems" placeholder="Search anything">
-    <!-- <select class="search-select-box" name="">
+    <input ng-model="searchFilter" class="input-for-searching-problems" placeholder="Search Anything">
+
+    <select class="search-select-box" ng-model="problemFilter">
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
-    </select> -->
-    <select class="s" name="">
-
     </select>
   </div>
   <!-- date-difficulty-user -->
+   <!-- ng-options="difficulty for problemFilter.difficulty in problems" -->
 
-  <br>
-  <br>
-  <br>
+
+  <div class="modal-cont" ng-if="modalOn">
+
+      <div class="modal-back" ng-click="turnOff()">
+
+      </div>
+
+      <div class="modal-box animated fadeInDown">
+        <!-- <button type="button" name="button" ng-click="turnOff()">Exit</button> -->
+
+        <i class="fa fa-times" aria-hidden="true" ng-click="turnOff()"></i>
+        <h2 id="sol-title">Solution</h2>
+
+        <br> <br>
+        <div class="solution-in-box">
+          <pre>{{problem.solution}}</pre>
+        </div>
+
+        <!-- created by: {{problem.creator.username}} <br>
+        posted on: {{problem.created}} -->
+
+<!-- date:"MM/dd/yyyy 'at' h:mma" -->
+      </div>
+
+  </div>
+
 
   <div class="problem-card-container">
 
-    <div ng-repeat="val in problems | filter: problemFilter" class="problem-template-card">
+    <div ng-repeat="val in problems | filter: problemFilter | filter: searchFilter" class="problem-template-card">
       <h2>{{val.title}}</h2>
       <h3>created by: {{val.creator.username}}</h3>
       <h4>difficulty: {{val.difficulty}}</h4>
       <i class="fa fa-heart-o heart-on-probs" aria-hidden="true" ng-click="addFavProblem(val._id)"></i>
-        <div class="definition-in-card">
-            Problem...
-            <div>{{val.definition}}</div>
+      <div class="definition-in-card">
+        Problem...
+        <div>{{val.definition}}
         </div>
+      </div>
 
-<button type="button" name="button" class="solution-button">Solution</button>
-         <!-- Solution: {{val.solution}} <br> -->
+      <button type="button" name="button" class="solution-button" ng-click = "openModal(val)">Solution</button>
+      <!-- Solution: {{val.solution}} <br> -->
     </div>
- <!-- animated rubberBand -->
+    <!-- animated rubberBand -->
   </div>
+
+
+  <p class="footer-create-a-prob-link">
+    <a ui-sref="myprobs">Create</a> a problem!
+  </p>
 
 </section>
 <!-- animated rubberBand on ng-repeat class -->

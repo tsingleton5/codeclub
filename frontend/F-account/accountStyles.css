@@ -1,20 +1,97 @@
 .accountView {
   background: white;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   margin-top: 90px;
+}
+
+.accountView h2 {
+  text-align: center;
+}
+
+.accountView p {
+  text-align: center;
+  font-size: 20px;
+}
+
+/*.accountView form {
+  display: flex;
+  justify-content: center;
+}*/
+
+.account-form {
+  border: 2px solid #C7F464;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+  margin: auto;
+  border-radius: 10px;
 }
 
 
 .account-info {
-
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
 }
 
 .account-info-bio {
+  width: 20vw;
+  padding: 20px;
+  margin: 10px;
 
 }
 
 
-.account-game-container {
-  
+.account-form button {
+  background: #C44D58;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 17px;
+  border-radius: 5px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 15px;
+  margin: 10px;
+
 }
+
+
+.account-form button:hover {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background: #ff6363;
+  cursor: alias;
+}
+
+
+
+/*.solution-button {
+  position: absolute;
+  bottom: 10px;
+  margin-left: 32%;
+  background: #C44D58;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 17px;
+  border-radius: 5px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 15px
+}
+
+.solution-button:hover {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background: #ff6363;
+  cursor: alias;
+}*/

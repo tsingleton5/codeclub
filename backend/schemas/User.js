@@ -17,7 +17,8 @@ var userSchema = new Schema({
     required: true
   },
   bio: {
-    type: String
+    type: String,
+    default: 'cool dude or dudette'
   },
   favorites: [{
     type: Schema.Types.ObjectId,

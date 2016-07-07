@@ -1,5 +1,6 @@
 angular.module('codeclub').controller('searchCtrl', function ($scope, searchService) { //add service
 
+$scope.modalOn = false;
 
 searchService.getProblems()
 .then(function (response) {
@@ -23,4 +24,30 @@ $scope.addFavProblem = function (problem) {
   })
 }
 
+$scope.turnOff = function () {
+  $scope.modalOn = false;
+}
+
+
+$scope.openModal = function (problem) {
+  $scope.problem = problem;
+  $scope.modalOn = true;
+
+}
+
+
+
+
+
+
+
+
+// $(document).ready(function() {
+//   $('heart-on-probs').on('click', function () {
+//     $(this).addClass('animate' 'zoomOutUp');
+//   })
+// });
+
+
+//ending
 })

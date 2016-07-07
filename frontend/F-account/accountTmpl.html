@@ -5,18 +5,26 @@
 
 <h2>Account Information</h2>
 
-Name: {{user.name}} <br>
-Username: {{user.username}} <br>
-Bio: {{user.bio}}
-
+<p>
+  Name: {{user.name}}
+</p>
+<p>
+  Username: {{user.username}}
+</p>
+<p>
+  Bio: {{user.bio}}
+</p>
 
 <br> <br> <br>
+
+<h2>Edit information</h2>
+
 
 <form ng-submit="updateUserInfo(userObj)" class="account-form">
 
 <input ng-model="userObj.name" placeholder="name" class="account-info">
 <input ng-model="userObj.username" placeholder="username" class="account-info">
-<textarea ng-model="userObj.bio" placeholder="bio" class="account-info-bio">
+<input ng-model="userObj.bio" placeholder="bio" class="account-info account-info-bio">
 <button type="submit">Update info</button>
 
 </form>
