@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Unica+One);
+
 .searchView {
   background: #f1f1f1;
   width: 100vw;
@@ -44,7 +46,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  margin-top: -239px;
+  top: 0px;
   z-index: 1000;
   background: rgba(166 ,166, 166, 0.7);
 }
@@ -54,10 +56,77 @@
   width: 600px;
   position: fixed;
   top: 200px;
-  left: 335px;
+  left: calc(50vw - 300px);
   z-index: 2000;
   /*height: 200px;*/
   border-radius: 5px;
+}
+
+.cc-logo-on-card {
+  font-family: Unica One;
+  position: absolute;
+  top: -12px;
+  right: 7px;
+}
+
+@media screen and (max-width: 635px) {
+  .modal-box {
+    background: white;
+    width: 480px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 240px);
+    z-index: 2000;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .modal-box {
+    background: white;
+    width: 440px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 220px);
+    z-index: 2000;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-box {
+    background: white;
+    width: 420px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 210px);
+    z-index: 2000;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .modal-box {
+    background: white;
+    width: 400px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 200px);
+    z-index: 2000;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .modal-box {
+    background: white;
+    width: 380px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 190px);
+    z-index: 2000;
+    border-radius: 5px;
+  }
 }
 
 .modal-box i {
@@ -79,7 +148,7 @@
   width: 100vw;
   word-break: break-all;
   font-size: 17px;
-  /*padding-left: 20px;*/
+  padding-left: 10px;
 }
 
 /*.definition-in-card {

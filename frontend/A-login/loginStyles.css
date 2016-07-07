@@ -1,10 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Unica+One);
+@import url(https://fonts.googleapis.com/css?family=Kreon);
 
 .title-logo {
   text-align: center;
   color: white;
-  font-family: fantasy;
+  font-family: Unica One;
   font-size: 55px;
+}
+
+.site-moto {
+  text-align: center;
+  font-family: Kreon;
+  color: white;
+  word-spacing: 3px;
 }
 
 .login-form {
@@ -32,8 +41,9 @@
 .catch-phrase {
   text-align: center;
   color: white;
-  font-family: Shadows Into Light;
+  font-family: Kreon;
   font-size: 20px;
+  word-spacing: 3px;
 }
 
 
@@ -48,9 +58,8 @@
   text-align: center;
   color: white;
   font-size: 1em;
-  font-style: oblique;
 }
 
 .login-redirect-signup a {
-  color: red;
+  color: black;
 }
