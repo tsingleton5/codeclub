@@ -26,6 +26,21 @@ body {
   margin-bottom: 90px;
 }
 
+.logo-navbar-cc {
+  margin-top: 10px;
+  border: 2px white solid;
+  border-radius: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-navbar-cc h1 a {
+  text-decoration: none;
+  color: black;
+}
+
 .main-routes-container li {
   list-style-type: none;
   margin: 20px;
@@ -47,7 +62,7 @@ body {
   .main-routes-container {
     display: block;
     position: relative;
-    height: 180px;
+    height: 220px;
     text-align: center;
     /*border-bottom: 2px black solid;*/
   }
@@ -56,16 +71,49 @@ body {
   }
 }
 
-@media screen and (max-width: 705px) {
-  svg {
+@media screen and (max-width: 700px) {
+  .logo-navbar-cc {
     display: none;
   }
-}
 
 }
+
+@media screen and (max-width: 615px) {
+  .logo-navbar-cc {
+    margin-top: 10px;
+    border: 2px white solid;
+    border-radius: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+}
+
+
 
 
 /*5cf58b*/
+
+
+
+
+
+/*.logo-navbar-cc {
+  margin-top: 10px;
+  border: 2px white solid;
+  border-radius: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-navbar-cc h1 a {
+  text-decoration: none;
+  color: black;
+}*/
 
 
 
@@ -75,7 +123,5 @@ body {
   top: 20px;
   left: 20px;
 }
-
-
 
 /*modal styling*/

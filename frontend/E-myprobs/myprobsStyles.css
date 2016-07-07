@@ -5,6 +5,125 @@
   margin-top: 90px;
 }
 
+.myprobsView h1 {
+  text-align: center;
+}
+
+.top-create-page-container {
+  text-align: center;
+}
+
+.top-create-page-container div {
+  display: inline-block;
+  width: 49%;
+}
+
+
+.create-prob-title {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.create-prob-definition {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+
+
+/*container of all form below*/
+.problem-create-form {
+  margin: 0 auto;
+  width: 85vw;
+  border-right: #838383 2px solid;
+  text-align: left;
+}
+
+.problem-create-form form {
+  padding-left: 5vw;
+}
+
+.problem-create-form div { /*dont think i need this*/
+  margin: auto;
+  width: auto;
+}
+
+.problem-create-form button {
+  display: block;
+  position: relative;
+  left: 10px;
+}
+
+/*where quotes start*/
+.quote-create-page-container h1 {
+}
+
+.quote-create-page-container div {
+  margin: auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 1067px) {
+  .quote-create-page-container div {
+    margin: auto;
+    width: 40%;
+    /*width: 66%;*/
+    position: absolute;
+    top: 150px;
+    right: 40px;
+  }
+  .quote-create-page-container h1 {
+    margin-top: 0px;
+  }
+}
+
+
+
+@media screen and (max-width: 658px) {
+  .quote-create-page-container div {
+    display: none;
+  }
+  .quote-create-page-container {
+    display: none;
+  }
+  .problem-create-form {
+    margin: 0 auto;
+    width: 100vw;
+    border-right: #838383 0px solid;
+    text-align: left;
+  }
+  .create-prob-title {
+    margin: 20px;
+  }
+
+  .problem-create-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /*margin: 0 auto;
+    width: 85vw;
+    border-right: #838383 2px solid;
+    text-align: left;*/
+  }
+
+  .problem-create-form form {
+    /*padding-left: 40%;*/
+  }
+
+  .problem-create-form div { /*dont think i need this*/
+    margin: auto;
+    width: auto;
+  }
+
+  .problem-create-form button {
+    display: block;
+    position: relative;
+    left: 10px;
+  }
+}
+/*where quotes end*/
 
 
 
@@ -12,6 +131,9 @@
 
 
 
+
+
+/*second section starts here*/
 
 .myprobs-container {
 
@@ -19,7 +141,7 @@
 
 
 .myprobs-higher-form {
-  height: 370px;
+  height: 500px;
 }
 
 .edit-problem-icon {
@@ -28,6 +150,56 @@
 
 .edit-problem-icon:hover {
   cursor: pointer;
+  color: black;
+}
+
+/*.asdf {
+  display: none;
+}*/
+
+.form-edit-delete-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-title-edit {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+.form-difficulty-edit {
+  width: 30%;
+  margin: 2px auto;
+}
+
+.form-definition-edit {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.form-solution-edit {
+  width: 90%;
+  margin: auto;
+}
+
+.form-savechange-edit {
+  width: 90%;
+  margin: auto;
+}
+
+.fa-trash {
+  width: auto;
+  margin: auto;
+  font-size: 20px;
+}
+.fa-trash:hover {
+  cursor: pointer;
+  color: red;
 }
 
 
