@@ -44,7 +44,7 @@ $scope.openModal = function (problem) {
 
 // $(document).ready(function() {
 //   $('heart-on-probs').on('click', function () {
-//     $(this).addClass('animate' 'zoomOutUp');
+//     $(this).addClass('animate' 'pulse');
 //   })
 // });
 

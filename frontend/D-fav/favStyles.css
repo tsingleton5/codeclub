@@ -1,6 +1,37 @@
 .favView {
   background: white;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin-top: 90px;
 }
+
+.favView h2 {
+  text-align: center;
+}
+
+/*container*/
+.favorite-container {
+  width: 60vw;
+  margin: 0px;
+}
+
+/*display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin: auto;
+margin-top: 40px;
+width: 80vw;*/
+.favorite-modal-back {
+  padding-bottom: 100px;
+}
+
+.star-favorites:hover {
+  color: black;
+  cursor: default;
+}
+
+
+@media screen and (max-width: 768px) {
+   .input-for-searching-problems {
+      width: 60vw;
+  }

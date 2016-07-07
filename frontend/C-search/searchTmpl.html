@@ -4,8 +4,9 @@
 
   <div class="search-input-container">
     <input ng-model="searchFilter" class="input-for-searching-problems" placeholder="Search Anything">
+    <br>
 
-    <select class="search-select-box" ng-model="problemFilter">
+    select difficulty: <select class="search-select-box" ng-model="problemFilter">
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
@@ -41,7 +42,7 @@
   </div>
 
 
-  <div class="problem-card-container">
+  <div class="problem-card-container favorites-container">
 
     <div ng-repeat="val in problems | filter: problemFilter | filter: searchFilter" class="problem-template-card">
       <h2>{{val.title}}</h2>

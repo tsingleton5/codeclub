@@ -30,6 +30,7 @@
   margin: 10px;
 }
 
+
 /*modal*/
 
 #sol-title {
@@ -43,7 +44,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  margin-top: -195px;
+  margin-top: -239px;
   z-index: 1000;
   background: rgba(166 ,166, 166, 0.7);
 }
@@ -74,9 +75,11 @@
 }
 
 .solution-in-box pre {
-  height: 100px;
+  height: 140px;
   width: 100vw;
   word-break: break-all;
+  font-size: 17px;
+  /*padding-left: 20px;*/
 }
 
 /*.definition-in-card {

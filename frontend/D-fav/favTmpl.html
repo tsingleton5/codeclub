@@ -6,29 +6,59 @@
 
 <!-- {{favorites}} -->
 
-<div ng-repeat="info in favorites">
-  {{info.title}}
-  {{info.difficulty}}
-  {{info.definition}}
+<!-- modal -->
+
+<div class="modal-cont" ng-if="modalOn">
+
+    <div class="modal-back favorite-modal-back" ng-click="turnOff()">
+
+    </div>
+
+    <div class="modal-box animated fadeInDown">
+      <!-- <button type="button" name="button" ng-click="turnOff()">Exit</button> -->
+
+      <i class="fa fa-times" aria-hidden="true" ng-click="turnOff()"></i>
+      <h2 id="sol-title">Solution</h2>
+
+      <br> <br>
+      <div class="solution-in-box">
+        <pre>{{problem.solution}}</pre>
+      </div>
+
+      <!-- created by: {{problem.creator.username}} <br>
+      posted on: {{problem.created}} -->
+
+<!-- date:"MM/dd/yyyy 'at' h:mma" -->
+    </div>
+
 </div>
 
-<!-- <div ng-repeat="info in favorites">
-  {{info.title}}
-</div> -->
+<!-- /modal -->
 
-  <!-- <div ng-repeat="liked in problems | filter: problemFilter" class="problem-layout-template">
 
-    <div class="top-template-problem">
-      <p class="problem-title">Title: {{liked.title}}</p>
-      <p class="problem-creator">Creator: {{liked.creator.username}}</p>
+
+<section class="problem-card-container favorite-container">
+
+
+<div ng-repeat="info in favorites" class="problem-template-card">
+  <h2>{{info.title}}</h2>
+  <h3>created by: {{info.creator.username}}</h3>
+  <h4>difficulty: {{info.difficulty}}</h4>
+  <i class="fa fa-star heart-on-probs star-favorites" aria-hidden="true"></i>
+  <div class="definition-in-card">
+    Problem...
+    <div>{{info.definition}}
     </div>
-  <br>
-  Definition: {{liked.definition}} <br>
-  Solution: {{liked.solution}}
+  </div>
+  <button type="button" name="button" class="solution-button" ng-click="openModal(info)">Solution</button>
+</div>
 
-    <div class="problem-difficulty">
-      difficulty: {{liked.difficulty}}
-    </div> -->
+</section>
+
+
+
+
+
 
 
 

@@ -1,5 +1,7 @@
 angular.module("codeclub").controller("favCtrl", function($scope, favService, user) {
 
+  $scope.modalOn = false;
+
 
 $scope.getProblems = function () {
   console.log(user.favorites);
@@ -10,6 +12,20 @@ $scope.getProblems = function () {
 }
 $scope.getProblems();
 
+
+
+
+
+$scope.turnOff = function () {
+  $scope.modalOn = false;
+}
+
+
+$scope.openModal = function (problem) {
+  $scope.problem = problem;
+  $scope.modalOn = true;
+
+}
 
 // $scope.displayFavs = searchService.addFavProb(problem);
 
