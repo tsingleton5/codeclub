@@ -2,11 +2,14 @@
 
 <section class="searchView">
 
+  <h1 style="text-align: center;">Search a Problem</h1>
+
   <div class="search-input-container">
     <input ng-model="searchFilter" class="input-for-searching-problems" placeholder="Search Anything">
     <br>
 
-    select difficulty: <select class="search-select-box" ng-model="problemFilter">
+    filter difficulty: <select class="search-select-box" ng-model="problemFilter">
+      <option disabled selected value="">Select Difficulty</option>
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>

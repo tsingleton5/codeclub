@@ -24,33 +24,82 @@
 
 
 
-
-
 .top-create-page-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.top-create-page-container h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 615px) {
+  .top-create-page-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
 
 .title-instruction-container {
-  border: 2px black solid;
+  /*border: 2px black solid;*/
+  /*width: 12vw;*/
 }
 
 .difficulty-instruction-container {
-  border: 2px blue solid;
+  /*border: 2px blue solid;*/
+  /*width: 12vw;*/
 }
 
 .definition-instruction-container {
-  border: 2px red solid;
+  /*border: 2px red solid;*/
 }
 .solution-instruction-container {
-  border: 2px purple solid;
+  /*border: 2px purple solid;*/
+}
+
+.button-instruction-container {
+  /*border: 2px green solid;*/
+}
+
+.button-instruction-container button {
+background: #ff6b6b;
+outline: none;
+border: none;
+color: white;
+padding: 17px;
+border-radius: 5px;
+padding-left: 20px;
+padding-right: 20px;
+font-size: 15px;
 }
 
 
 
+/*hover*/
+/*.hhh {
+  cursor: pointer;
 
+}
+
+.ttt {
+ display: none;
+ position: absolute;
+ top: -75px;
+ left: 5px;
+
+ background-color: #f9f9f9;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ overflow: scroll;
+ padding: 12px;
+ word-break: break-all;
+}
+
+.hhh:hover .ttt {
+ display: block;
+}*/
+/*hover*/
 
 
 
@@ -62,7 +111,8 @@
 
 
 .myprobs-higher-form {
-  height: 500px;
+  overflow: auto;
+  height: auto;
 }
 
 .edit-problem-icon {
@@ -78,46 +128,61 @@
   display: none;
 }*/
 
-.form-edit-delete-container {
+
+
+/*.edit-field-pencil-blank {
+  display: none;
+}*/
+.edit-form-container {
+  overflow: hidden;
+}
+
+
+.edit-field-dropdown {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 .form-title-edit {
   width: 75%;
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
 }
 
 .form-difficulty-edit {
   width: 30%;
-  margin: 2px auto;
+  margin: 10px auto;
 }
 
 .form-definition-edit {
   width: 90%;
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
 }
 
 .form-solution-edit {
   width: 90%;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .form-savechange-edit {
   width: 90%;
-  margin: auto;
+  margin: 10px auto;
   background: #556270;
   color: white;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 2px;
 }
 
 .fa-trash {
   width: auto;
-  margin: auto;
+  margin: 10px auto;
   font-size: 20px;
 }
 .fa-trash:hover {
@@ -134,3 +199,10 @@
   margin-top: 40px;
   width: 80vw;
 }*/
+
+.myProbs-solution {
+  position: relative;
+}
+#myprobs-higher-form {
+  height: auto;
+}

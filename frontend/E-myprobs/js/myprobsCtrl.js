@@ -55,6 +55,14 @@ $scope.openModal = function (problem) {
 
 
 
+// $(document).ready(function() {
+//   $('edit-problem-icon').on('click', function () {
+//     $('.edit-field-dropdown').addClass();
+//   })
+// });
+
+
+
 
 //ending
 })

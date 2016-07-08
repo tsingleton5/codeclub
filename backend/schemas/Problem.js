@@ -5,6 +5,7 @@ var problemSchema = new Schema({
   title: {
     type: String,
     required: true
+    // maxlength: 20
   },
   creator: {
     type: Schema.Types.ObjectId,

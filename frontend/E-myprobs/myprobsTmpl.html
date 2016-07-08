@@ -10,10 +10,12 @@
 
 
    <div class="title-instruction-container">
+     <h2>1. Give it a title</h2>
     <input type="input" ng-model="problem.title" placeholder="title" class="create-prob-title">
 </div>
 
   <div class="difficulty-instruction-container">
+    <h2>2. Give it a difficuly</h2>
     <select ng-model="problem.difficulty" class="create-prob-difficulty">
       <option disabled selected value="">Select Difficulty</option>
       <option value="beginner">Beginner</option>
@@ -23,17 +25,25 @@
   </div>
 
 <div class="definition-instruction-container">
+  <h2>3. Define the Problem</h2>
     <textarea type="input" ng-model="problem.definition" placeholder="definition" rows="3" cols="25" class="create-prob-definition"></textarea>
   </div>
 
   <div class="solution-instruction-container">
+    <h2>4. What's the Solution?</h2>
     <textarea type="input" ng-model="problem.solution" ng-trim="false"
     class="create-prob-definition" placeholder="solution" rows="3" cols="25"></textarea>
   </div>
 
-    <!-- <button type="submit">Add new Problem</button> -->
+  <div class="button-instruction-container">
+    <h2>5. Post it!</h2>
+  <button type="submit">Add new Problem</button>
+</div>
+
 
 </section>
+<!-- <button type="submit">Add new Problem</button> outside of form here -->
+
 </form>
 
 
@@ -65,7 +75,7 @@
 
   <section class="problem-card-container myprobs-container">
 
-    <div ng-repeat="val in problems" class="problem-template-card myprobs-higher-form">
+    <div ng-repeat="val in problems"  class="problem-template-card myprobs-higher-form">
       <h2>{{val.title}}</h2>
       <h3>Creator: yours truly</h3>
       <h4>difficulty: {{val.difficulty}}</h4>
@@ -75,35 +85,39 @@
         <div>{{val.definition}}
         </div>
       </div>
-      <button type="button" name="button" class="solution-button" ng-click="openModal(val)">Solution</button>
 <!-- <div class="animated bounceInDown asdf"> -->
 
-      <form ng-sumbit="editProblem(val)" class="form-edit-delete-container">
+      <form class="edit-form-container" ng-sumbit="editProblem(val)">
         <i class="fa fa-pencil heart-on-probs edit-problem-icon" aria-hidden="true" ng-click="editProblem(val)"></i>
         <br>
+
+        <div class="edit-field-dropdown">
         <input type="input" ng-model="val.title" placeholder="title *required" class="form-title-edit">
-        <br>
         <select ng-model="val.difficulty" class="form-difficulty-edit">
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
-        <textarea type="input" ng-model="val.definition" placeholder="definition" class="form-definition-edit"></textarea>
-        <textarea type="input" ng-model="val.solution" placeholder="solution" class="form-solution-edit"></textarea>
-        <button type="submit" ng-click="editProblem(val)" class="form-savechange-edit">Save Changes?</button>
-
-        <!-- <button ng-click="deleteProblem(val._id)" style="background: red;">Delete Problem</button> -->
+        <textarea type="input" ng-model="val.definition" placeholder="definition" class="form-definition-edit" rows="4"></textarea>
+        <textarea type="input" ng-model="val.solution" placeholder="solution" class="form-solution-edit" rows="4"></textarea>
+        <button type="submit" ng-click="editProblem(val)" class="form-savechange-edit">Save Changes</button>
         <i class="fa fa-trash" aria-hidden="true" ng-click="deleteProblem(val._id)"></i>
+      </div>
+
       </form>
+
 
       <!-- <button type="button or sumbit" ng-click="editProblem(val)">Edit Problem</button> both work now -->
 <hr> <br> <br>
       <!-- <br>
       <hr>
       <br> -->
+      <button type="button" name="button" class="myProbs-solution solution-button" ng-click="openModal(val)">Solution</button>
+
     </div>
 
   </section>
+
 
 
 
