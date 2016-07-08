@@ -14,7 +14,9 @@ module.exports = {
 
   getFavorites: function (req, res) {
     console.log(req.body, 'favsss');
-    Problem.find({_id: {$in: req.body.fav}}, function (error, response) {
+    Problem.find({_id: {$in: req.body.fav}})
+    .populate('creator')
+      .exec(function (error, response) {
       console.log(response);
       console.log(error, 'error');
       if (error) {

@@ -40,8 +40,22 @@ width: 80vw;*/
 
 .quotes-section {
   /*border: 2px red dashed;*/
-  width: 40vw;
+  width: 33vw;
   padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.quotes-section .quotes-text{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 1800px) {
+  .quotes-section .quotes-text{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .quotes-section div {

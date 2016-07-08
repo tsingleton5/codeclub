@@ -44,6 +44,11 @@ $scope.openModal = function (problem) {
 
 
 
+favService.getQuotes().then(function (response) {
+  $scope.quotes = response.facts;
+})
+
+
 
 
 });

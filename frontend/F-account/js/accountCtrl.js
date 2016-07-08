@@ -1,10 +1,16 @@
-angular.module("codeclub").controller("accountCtrl", function($scope, user, accountService) {
+angular.module("codeclub").controller("accountCtrl", function($scope, user, accountService, $state) {
 $scope.user = user;
 
 $scope.updateUserInfo = function (userObj) {
   accountService.updateUser(userObj).then(function (response) {
     $scope.user = response.data; // *
   })
+}
+
+$scope.logoutUser = function () {
+  setTimeout(function () {
+    $state.go('login');
+  }, 1000)
 }
 
 });

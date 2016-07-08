@@ -163,6 +163,27 @@
 /*/modal*/
 
 
+/*bio modal*/
+/*.user-modal-back {
+    width: 10vw;
+    height: 10vh;
+    z-index: 1000;
+    background: rgba(166 ,166, 166, 0.7);
+}*/
+
+.user-modal-box {
+  background: red;
+  width: 600px;
+  z-index: 2000;
+  border-radius: 5px;
+}
+
+#bio-header {
+  text-align: center;
+  margin-top: -28px;
+}
+/*//bio modal*/
+
 /*start*/
 
 .problem-card-container {
@@ -188,6 +209,8 @@
 .problem-template-card h2 {
   margin: auto;
   text-align: center;
+  margin-left: 25px;
+  margin-right: 20px;
 }
 
 .problem-template-card h3 {
@@ -303,16 +326,17 @@
 
 /*HOVER OVER to see BIO*/
 
-.hover-creator-bio {
+/*.hover-creator-bio {
   cursor: pointer;
 
 }
 
-.dropdown-bio { /* used to be # */
+.dropdown-bio {
  display: none;
  position: absolute;
  top: -75px;
- left: 5px;
+ left: -10px;
+ width: 15vw;
 
  background-color: #f9f9f9;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -324,4 +348,20 @@
 .hover-creator-bio:hover .dropdown-bio {
  display: flex;
  flex-direction: column;
+}
+
+.dropdown-bio:hover  {
+ display: flex;
+ flex-direction: column;
+}*/
+
+
+.creator-info-top-left-holder {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+.creator-info-top-left-holder:hover {
+  cursor: pointer;
 }

@@ -1,6 +1,8 @@
 angular.module('codeclub').controller('searchCtrl', function ($scope, searchService) { //add service
 
 $scope.modalOn = false;
+$scope.userInfoOn = false;
+
 
 searchService.getProblems()
 .then(function (response) {
@@ -35,8 +37,22 @@ $scope.openModal = function (problem) {
 
 }
 
+$scope.showUserInfo = function (info) {
+  $scope.info = info;
+  $scope.userInfoOn = true;
+}
+
+$scope.showUserInfoTurnOff = function () {
+  $scope.userInfoOn = false;
+}
 
 
+
+// $(document).ready(function() {
+//   $('creator-info-top-left-holder').on('click', function () {
+//     $(this).addClass('animate' 'pulse');
+//   })
+// });
 
 
 

@@ -106,3 +106,17 @@
   background: #ff6363;
   cursor: alias;
 }*/
+
+.logoutUser {
+  background: #C44D58;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 17px;
+  border-radius: 5px;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 45%;
+}
