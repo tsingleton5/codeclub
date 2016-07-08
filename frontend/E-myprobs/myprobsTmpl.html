@@ -1,49 +1,40 @@
 <navbar></navbar>
 
-
-
-
 <section class="myprobsView">
 
 <h1>Create a Problem</h1>
 
+<form ng-submit="addProblem(problem)">
+
 <section class="top-create-page-container">
 
 
-<div class="problem-create-form">
- <form ng-submit="addProblem(problem)">
-  <div>
+   <div class="title-instruction-container">
     <input type="input" ng-model="problem.title" placeholder="title" class="create-prob-title">
+</div>
+
+  <div class="difficulty-instruction-container">
     <select ng-model="problem.difficulty" class="create-prob-difficulty">
+      <option disabled selected value="">Select Difficulty</option>
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
     </select>
   </div>
-  <div>
-    <!-- <input type="input" ng-model="problem.difficulty" placeholder="difficulty"> -->
-    <textarea type="input" ng-model="problem.definition" placeholder="definition" rows="3" cols="25" class="create-prob-definition"></textarea>
 
+<div class="definition-instruction-container">
+    <textarea type="input" ng-model="problem.definition" placeholder="definition" rows="3" cols="25" class="create-prob-definition"></textarea>
+  </div>
+
+  <div class="solution-instruction-container">
     <textarea type="input" ng-model="problem.solution" ng-trim="false"
     class="create-prob-definition" placeholder="solution" rows="3" cols="25"></textarea>
-    <button type="submit">Add new Problem</button>
   </div>
-  </form>
-</div>
 
-
-<div class="quote-create-page-container">
-  <div>
-
- <h1>Cat Facts: </h1>
- <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- </p>
-</div>
-
-</div>
+    <!-- <button type="submit">Add new Problem</button> -->
 
 </section>
+</form>
 
 
 <br><br>

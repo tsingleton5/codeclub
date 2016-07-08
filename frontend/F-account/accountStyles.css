@@ -1,5 +1,5 @@
 .accountView {
-  background: white;
+  background: #f1f1f1;
   width: 100vw;
   height: 110vh;
   margin-top: 90px;
@@ -22,7 +22,8 @@
 }*/
 
 .account-form {
-  border: 2px solid #C7F464;
+  border: 2px solid #556270;
+  /*#4ECDC4 or #C7F464*/
   display: flex;
   align-items: center;
   flex-direction: column;

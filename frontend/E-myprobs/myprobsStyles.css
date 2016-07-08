@@ -1,5 +1,5 @@
 .myprobsView {
-  background: white;
+  background: #f1f1f1;
   width: 100vw;
   height: 90%;
   margin-top: 90px;
@@ -7,15 +7,6 @@
 
 .myprobsView h1 {
   text-align: center;
-}
-
-.top-create-page-container {
-  text-align: center;
-}
-
-.top-create-page-container div {
-  display: inline-block;
-  width: 49%;
 }
 
 
@@ -33,99 +24,29 @@
 
 
 
-/*container of all form below*/
-.problem-create-form {
-  margin: 0 auto;
-  width: 85vw;
-  border-right: #838383 2px solid;
-  text-align: left;
-}
 
-.problem-create-form form {
-  padding-left: 5vw;
-}
 
-.problem-create-form div { /*dont think i need this*/
-  margin: auto;
-  width: auto;
-}
-
-.problem-create-form button {
-  display: block;
-  position: relative;
-  left: 10px;
-}
-
-/*where quotes start*/
-.quote-create-page-container h1 {
-}
-
-.quote-create-page-container div {
-  margin: auto;
-  width: 90%;
-}
-
-@media screen and (max-width: 1067px) {
-  .quote-create-page-container div {
-    margin: auto;
-    width: 40%;
-    /*width: 66%;*/
-    position: absolute;
-    top: 150px;
-    right: 40px;
-  }
-  .quote-create-page-container h1 {
-    margin-top: 0px;
-  }
+.top-create-page-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 
 
-@media screen and (max-width: 658px) {
-  .quote-create-page-container div {
-    display: none;
-  }
-  .quote-create-page-container {
-    display: none;
-  }
-  .problem-create-form {
-    margin: 0 auto;
-    width: 100vw;
-    border-right: #838383 0px solid;
-    text-align: left;
-  }
-  .create-prob-title {
-    margin: 20px;
-  }
-
-  .problem-create-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /*margin: 0 auto;
-    width: 85vw;
-    border-right: #838383 2px solid;
-    text-align: left;*/
-  }
-
-  .problem-create-form form {
-    /*padding-left: 40%;*/
-  }
-
-  .problem-create-form div { /*dont think i need this*/
-    margin: auto;
-    width: auto;
-  }
-
-  .problem-create-form button {
-    display: block;
-    position: relative;
-    left: 10px;
-  }
+.title-instruction-container {
+  border: 2px black solid;
 }
-/*where quotes end*/
 
+.difficulty-instruction-container {
+  border: 2px blue solid;
+}
 
+.definition-instruction-container {
+  border: 2px red solid;
+}
+.solution-instruction-container {
+  border: 2px purple solid;
+}
 
 
 
@@ -190,6 +111,8 @@
 .form-savechange-edit {
   width: 90%;
   margin: auto;
+  background: #556270;
+  color: white;
 }
 
 .fa-trash {
