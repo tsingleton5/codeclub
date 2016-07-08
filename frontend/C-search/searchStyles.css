@@ -289,9 +289,37 @@
      .input-for-searching-problems {
         width: 60vw;
     }
+  }
 
 /*@media screen and (max-width: 615px) {
   .search-select-box {
     width: 50vw;
   }
 }*/
+
+
+
+/*HOVER OVER to see BIO*/
+
+.hover-creator-bio {
+  cursor: pointer;
+
+}
+
+.dropdown-bio { /* used to be # */
+ display: none;
+ position: absolute;
+ top: -75px;
+ left: 5px;
+
+ background-color: #f9f9f9;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ overflow: scroll;
+ padding: 12px;
+ word-break: break-all;
+}
+
+.hover-creator-bio:hover .dropdown-bio {
+ display: flex;
+ flex-direction: column;
+}

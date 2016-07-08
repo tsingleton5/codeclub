@@ -51,12 +51,19 @@
 
     <div ng-repeat="val in problems | filter: problemFilter | filter: searchFilter" class="problem-template-card">
       <h2>{{val.title}}</h2>
-      <h3>created by: {{val.creator.username}}</h3>
+      <h3 class="hover-creator-bio">created by: {{val.creator.username}}
+        <span class="dropdown-bio animated fadeIn"> <!-- MAKE THIS AN ARROW TO SHOW MORE -->
+          <option>Name: {{val.creator.name}}</option>
+          <!-- <option>{{val.creator.username}}</option> -->
+          <option>Bio: {{val.creator.bio}}</option>
+        </span>
+      </h3>
+
       <h4>difficulty: {{val.difficulty}}</h4>
       <i class="fa fa-heart-o heart-on-probs" aria-hidden="true" ng-click="addFavProblem(val._id)"></i>
       <div class="definition-in-card">
         Problem...
-        <div>{{val.definition}}
+        <div class="hover-creator-bio">{{val.definition}}
         </div>
       </div>
 

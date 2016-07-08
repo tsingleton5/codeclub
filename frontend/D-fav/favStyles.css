@@ -13,7 +13,13 @@
 /*container*/
 .favorite-container {
   width: 60vw;
-  margin: 0px;
+  /*margin: 0px;*/
+}
+
+
+.container-fav-both {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*display: flex;
@@ -33,15 +39,49 @@ width: 80vw;*/
 
 
 .quotes-section {
-  border: 2px red dashed;
+  /*border: 2px red dashed;*/
+  width: 40vw;
+  padding: 10px;
 }
 
+.quotes-section div {
+  text-align: center;
+}
 
-@media screen and (max-width: 768px) {
+/*.quotes-section div h2 {
+  font-size: 25px;
+}
+
+.quotes-section div p {
+  font-size: 15px;
+}*/
+
+.line-up-filler {
+  border: #838383 2px solid;
+  width: 0px;
+  height: 200px;
+  display: inline-block;
+  margin: 40px;
+}
+
+@media screen and (max-width: 615px) {
+ .quotes-section {
+ display: none;
+
+}
+}
+
+@media screen and (max-width: 615px) {
 .favorite-container {
   width: 80vw;
-  margin: auto;
+  /*margin: auto;*/
   }
+
+  /*@media screen and (max-width: 670px) {
+  .favorite-container {
+      margin-top: 10px;
+    }*/
+  /*768*/
 
   /*@media screen and (min-width: 768px) {
   .favView h1 {

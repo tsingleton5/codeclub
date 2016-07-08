@@ -28,17 +28,19 @@ body {
 
 .logo-navbar-cc {
   margin-top: 10px;
-  border: 2px white solid;
-  border-radius: 20px;
+  /*border: 2px white solid;*/
+  /*border-radius: 20px;*/
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
 
 .logo-navbar-cc h1 a {
   text-decoration: none;
   color: black;
+  font-family: Unica One;
 }
 
 .main-routes-container li {
@@ -51,7 +53,7 @@ body {
   color: white;
   text-decoration: none;
   font-family: Unica One;
-  font-size: 2em;
+  font-size: 29px;
 }
 
 .main-routes:hover {
@@ -75,11 +77,18 @@ body {
   .logo-navbar-cc {
     display: none;
   }
-
 }
+
+@media screen and (max-width: 755px) {
+  .logo-navbar-cc {
+    font-size: 23px;
+  }
+}
+/*755 code club doesnt look right*/
 
 @media screen and (max-width: 615px) {
   .logo-navbar-cc {
+    margin: 10px;
     margin-top: 10px;
     border: 2px white solid;
     border-radius: 20px;
@@ -90,6 +99,8 @@ body {
     }
 
 }
+
+
 
 
 

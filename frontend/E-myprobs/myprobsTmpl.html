@@ -84,12 +84,14 @@
         <div>{{val.definition}}
         </div>
       </div>
-      <button type="button" name="button" class="solution-button" ng-click = "openModal(val)">Solution</button>
+      <button type="button" name="button" class="solution-button" ng-click="openModal(val)">Solution</button>
 <!-- <div class="animated bounceInDown asdf"> -->
 
       <form ng-sumbit="editProblem(val)" class="form-edit-delete-container">
         <i class="fa fa-pencil heart-on-probs edit-problem-icon" aria-hidden="true" ng-click="editProblem(val)"></i>
+        <br>
         <input type="input" ng-model="val.title" placeholder="title *required" class="form-title-edit">
+        <br>
         <select ng-model="val.difficulty" class="form-difficulty-edit">
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
@@ -101,9 +103,7 @@
 
         <!-- <button ng-click="deleteProblem(val._id)" style="background: red;">Delete Problem</button> -->
         <i class="fa fa-trash" aria-hidden="true" ng-click="deleteProblem(val._id)"></i>
-
       </form>
-    <!-- </div> -->
 
       <!-- <button type="button or sumbit" ng-click="editProblem(val)">Edit Problem</button> both work now -->
 <hr> <br> <br>
