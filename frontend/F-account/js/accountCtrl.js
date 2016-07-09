@@ -7,11 +7,21 @@ $scope.updateUserInfo = function (userObj) {
   })
 }
 
-$scope.logoutUser = function () {
-  setTimeout(function () {
+
+$scope.logout = function (user) {
+  accountService.logout().then(function (response) {
     $state.go('login');
-  }, 1000)
+    return response;
+  })
 }
+
+
+
+// $scope.logoutUser = function () {
+//   setTimeout(function () {
+//     $state.go('login');
+//   }, 1000)
+// }
 
 });
 

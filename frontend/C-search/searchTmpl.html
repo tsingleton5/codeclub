@@ -54,12 +54,13 @@
 
     <div ng-repeat="val in problems | filter: problemFilter | filter: searchFilter" class="problem-template-card">
       <h2>{{val.title}}</h2>
-      <h3>created by: {{val.creator.username}}
-        <!-- <span class="dropdown-bio animated fadeIn">
-          <option>Name: {{val.creator.name}}</option>
-          <option>Bio: {{val.creator.bio}}</option>
-        </span> -->
-      </h3>
+       <h3 class="hover-creator-bio">created by: {{val.creator.username}}
+         <span class="dropdown-bio animated fadeIn"> <!-- MAKE THIS AN ARROW TO SHOW MORE -->
+           <option>Name: {{val.creator.name}}</option>
+           <!-- <option>{{val.creator.username}}</option> -->
+           <option>Bio: {{val.creator.bio}}</option>
+         </span>
+       </h3>
 
       <h4>difficulty: {{val.difficulty}}</h4>
       <i class="fa fa-heart-o heart-on-probs" aria-hidden="true" ng-click="addFavProblem(val._id)"></i>
@@ -71,27 +72,7 @@
 
       <button type="button" name="button" class="solution-button" ng-click = "openModal(val)">Solution</button>
 
-      <div class="creator-info-top-left-holder">
-      <i class="fa fa-info-circle" aria-hidden="true" class="creator-info-top-left" ng-click="userInfoOn = true; info = val"></i>
 
-      <div class="user-modal-cont" ng-if="userInfoOn">
-
-          <div class="user-modal-back" ng-click="showUserInfoTurnOff()">
-
-          </div>
-
-          <div class="user-modal-box">
-
-                    <i class="fa fa-times" aria-hidden="true" ng-click="showUserInfoTurnOff()"></i>
-                    <h2 id="sol-title">bio</h2>
-
-                    <div class="info-in-box">
-                      <pre>{{info.creator.bio}}</pre>
-                    </div>
-
-          </div>
-
-      </div>
     </div>
 
 

@@ -12,4 +12,14 @@ this.updateUser = function (userObj) {
   })
 }
 
+this.logout = function() {
+  return $http({
+    method: 'GET',
+    url: '/logout'
+  }).then(function(response) {
+    // console.log(response);
+    return response;
+  });
+};
+
 })

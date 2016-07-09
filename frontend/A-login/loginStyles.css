@@ -13,7 +13,7 @@
   text-align: center;
   font-family: Kreon;
   color: white;
-  word-spacing: 3px;
+  word-spacing: 4px;
 }
 
 .login-form {
@@ -22,20 +22,42 @@
   text-align: center;
   border: 2px white solid;
   width: 32vw;
-  height: 220px;
+  height: 260px;
   border-radius: 12px;
 }
 
 .username-input {
-  width: 60%;
+  width: 59%;
   display: block;
-  margin: 20px auto;
+  margin: 27px auto;
+  padding: 10px;
+  font-size: 15px;
 }
 
 .password-input {
-  width: 60%;
+  width: 59%;
   display: block;
-  margin: auto;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.login-button {
+  background: #C44D58;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  padding-left: 42px;
+  padding-right: 42px;
+  font-size: 24px;
+  margin: 10px;
+  width: 66%;
+}
+
+.login-button:hover {
+  cursor: pointer;
 }
 
 .catch-phrase {
@@ -47,19 +69,41 @@
 }
 
 
+@media screen and (max-width: 1150px) {
+  .login-form {
+    width: 40vw;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .login-form {
+    width: 50vw;
+    height: 250px;
+  }
+}
+
 @media screen and (max-width: 705px) {
   .login-form {
     width: 60vw;
-    height: 220px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login-form {
+    width: 80vw;
+    height: 250px;
   }
 }
 
 .login-redirect-signup {
   text-align: center;
   color: white;
-  font-size: 1em;
+  font-size: 17px;
 }
 
 .login-redirect-signup a {
   color: black;
+  text-decoration: none;
 }

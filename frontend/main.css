@@ -10,6 +10,11 @@ body {
   margin: 0 auto;
 }
 
+pre {
+  font-family: monospace;
+}
+/*MAYBE CANGE PRE TAGS TO CODE TAGS*/
+
 
 /*#4ECDC4
 #C7F464*/

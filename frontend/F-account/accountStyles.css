@@ -56,7 +56,7 @@
 
 
 .account-form button {
-  background: #C44D58;
+  background: #ff6363;
   outline: none;
   border: none;
   color: white;
@@ -76,8 +76,8 @@
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
-  background: #ff6363;
-  cursor: alias;
+  background: #ff6369;
+  cursor: pointer;
 }
 
 
@@ -107,6 +107,11 @@
   cursor: alias;
 }*/
 
+.logout-button-cont {
+  display: flex;
+  justify-content: center;
+}
+
 .logoutUser {
   background: #C44D58;
   outline: none;
@@ -118,5 +123,8 @@
   padding-right: 42px;
   font-size: 20px;
   margin: 10px;
-  margin-left: 45%;
+}
+
+.logoutUser:hover {
+  cursor: pointer;
 }

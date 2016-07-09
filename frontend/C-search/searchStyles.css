@@ -249,7 +249,7 @@
 
 .solution-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 25px;
   margin-left: 30.5%;
   background: #ff6b6b;
   outline: none;
@@ -326,7 +326,7 @@
 
 /*HOVER OVER to see BIO*/
 
-/*.hover-creator-bio {
+.hover-creator-bio {
   cursor: pointer;
 
 }
@@ -335,8 +335,9 @@
  display: none;
  position: absolute;
  top: -75px;
- left: -10px;
- width: 15vw;
+ left: 10px;
+ width: 20vw;
+ height: auto;
 
  background-color: #f9f9f9;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -348,20 +349,10 @@
 .hover-creator-bio:hover .dropdown-bio {
  display: flex;
  flex-direction: column;
+ justify-content: center;
 }
 
-.dropdown-bio:hover  {
+/*.dropdown-bio:hover  {
  display: flex;
  flex-direction: column;
 }*/
-
-
-.creator-info-top-left-holder {
-  position: absolute;
-  top: 2px;
-  left: 5px;
-}
-
-.creator-info-top-left-holder:hover {
-  cursor: pointer;
-}

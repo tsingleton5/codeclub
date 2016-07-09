@@ -64,7 +64,7 @@
 }
 
 .button-instruction-container button {
-background: #ff6b6b;
+background: #C44D58;
 outline: none;
 border: none;
 color: white;
@@ -72,8 +72,15 @@ padding: 17px;
 border-radius: 5px;
 padding-left: 20px;
 padding-right: 20px;
-font-size: 15px;
+font-size: 17px;
+margin-top: 10px;
 }
+
+.button-instruction-container button:hover {
+  cursor: pointer;
+}
+
+
 
 
 

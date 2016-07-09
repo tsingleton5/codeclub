@@ -10,7 +10,7 @@ var problemSchema = new Schema({
   creator: {
     type: Schema.Types.ObjectId,
     ref: "User"
-  },
+    },
   difficulty: {
     type: String,
     required: true,

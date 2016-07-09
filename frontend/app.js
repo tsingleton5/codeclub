@@ -18,7 +18,19 @@ $stateProvider
 .state('search', {
   url: '/search',
   templateUrl: 'C-search/searchTmpl.html',
-  controller: 'searchCtrl'
+  controller: 'searchCtrl',
+  resolve: {
+    user: function (authService, $state) {
+      return authService.getCurrentUser().then(function (response) {
+        if(!response.data) {
+          $state.go('login')
+        }
+        return response.data;
+      }).catch(function (error) {
+        $state.go('login');
+      })
+    }
+  }
 })
 .state('fav', {
   url: '/fav',
@@ -40,7 +52,19 @@ $stateProvider
 .state('myprobs', {
   url: '/myprobs',
   templateUrl: 'E-myprobs/myprobsTmpl.html',
-  controller: 'myprobsCtrl'
+  controller: 'myprobsCtrl',
+  resolve: {
+    user: function (authService, $state) {
+      return authService.getCurrentUser().then(function (response) {
+        if(!response.data) {
+          $state.go('login')
+        }
+        return response.data;
+      }).catch(function (error) {
+        $state.go('login');
+      })
+    }
+  }
 })
 .state('account', {
   url: '/account',

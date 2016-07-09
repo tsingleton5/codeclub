@@ -1,4 +1,4 @@
-angular.module('codeclub').controller('signupCtrl', function ($scope, authService) {
+angular.module('codeclub').controller('signupCtrl', function ($scope, authService, $state) {
 
   $scope.register = function (user) {
     authService.registerUser(user).then(function (response) {
@@ -7,6 +7,7 @@ angular.module('codeclub').controller('signupCtrl', function ($scope, authServic
       }
       else {
         alert('User successfully created');
+        $state.go('login');
         $scope.newUser = {};
       }
     }).catch(function (error) {
