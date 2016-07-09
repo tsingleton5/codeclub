@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var problemSchema = new Schema({
   title: {
     type: String,
-    required: true
-    // maxlength: 20
+    required: true,
+    maxlength: 30
   },
   creator: {
     type: Schema.Types.ObjectId,
@@ -27,8 +27,8 @@ var problemSchema = new Schema({
   solution: {
     type: String,
     required: true
-  },
-  created: {type: Date, default: new Date()}
+  }
+  // created: {type: Date, default: new Date()}
 })
 
 module.exports = mongoose.model('Problem', problemSchema);

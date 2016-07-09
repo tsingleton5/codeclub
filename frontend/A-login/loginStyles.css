@@ -57,6 +57,15 @@
 }
 
 .login-button:hover {
+  background: #FF6B6B;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.login-button:hover {
   cursor: pointer;
 }
 
@@ -100,7 +109,7 @@
 .login-redirect-signup {
   text-align: center;
   color: white;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .login-redirect-signup a {

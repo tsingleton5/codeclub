@@ -334,9 +334,9 @@
 .dropdown-bio {
  display: none;
  position: absolute;
- top: -75px;
- left: 10px;
- width: 20vw;
+ top: -11vh;
+ left: -12px;
+ width: 300px;
  height: auto;
 
  background-color: #f9f9f9;
@@ -355,4 +355,11 @@
 /*.dropdown-bio:hover  {
  display: flex;
  flex-direction: column;
+}*/
+
+/*@media screen and (max-width: 500px) {
+  .dropdown-bio {
+    width: 265px;
+
+  }
 }*/

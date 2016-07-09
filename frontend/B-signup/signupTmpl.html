@@ -1,31 +1,16 @@
+<h1 class="title-logo animated pulse">Code Club</h1>
+<h3 class="site-moto">The ultimate solution for your <br> everyday toy problems</h3>
 
-<h2 id="sign-up-header">SIGN UP</h2>
-<!-- <form ng-submit="register(newUser)">
-  Name: <input type="text" ng-model="newUser.name" required/>
-  Username: <input type="text" ng-model="newUser.username" required/>
-  Password: <input type="password" ng-model="newUser.password" required/>
-  <button type="submit">Register</button>
-</form> -->
+<br>
 
+<!-- animated flash below on form cont -->
+<form ng-submit="register(newUser)" class="signup-form">
+    <input type="text" class="name-signup-input animated fadeInLeft" ng-model="newUser.name" placeholder="name" required/>
 
-<form ng-submit="register(newUser)">
-<div class="wrap">
-  <div class="mat-div">
-    <label class="mat-label">Name</label>
-    <input type="text" class="mat-input" id="first-name" ng-model="newUser.name" required/>
-  </div>
+    <input type="text" class="username-signup-input animated fadeInRight" ng-model="newUser.username" placeholder="username" required/>
 
-    <div class="mat-div">
-    <label class="mat-label">Username</label>
-    <input type="text" class="mat-input" id="last-name" ng-model="newUser.username" required/>
-  </div>
-
-    <div class="mat-div">
-    <label class="mat-label">Password</label>
-    <input type="password" class="mat-input" id="password" ng-model="newUser.password" required/>
-  </div>
-    <button type="submit" class="signup-button">Submit</button>
-</div>
+    <input type="password" class="password-signup-input animated fadeInDown" ng-model="newUser.password" placeholder="password" required/>
+    <button type="submit" class="signup-button animated fadeInUp">Sign Up</button>
 </form>
 
 
@@ -34,3 +19,8 @@
 </p>
 
 <!-- took out for in inputs -->
+
+
+
+<!-- <br> <br> <br> <br> <br> <br> <br> -->
+<!-- <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a> -->

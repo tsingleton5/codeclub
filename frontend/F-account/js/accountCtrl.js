@@ -10,8 +10,10 @@ $scope.updateUserInfo = function (userObj) {
 
 $scope.logout = function (user) {
   accountService.logout().then(function (response) {
-    $state.go('login');
-    return response;
+    setTimeout(function () {
+      $state.go('login');
+      return response;
+    }, 300)
   })
 }
 
