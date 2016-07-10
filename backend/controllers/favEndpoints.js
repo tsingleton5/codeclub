@@ -3,7 +3,7 @@ var Problem = require('../schemas/Problem.js');
 
 module.exports = {
   newLike: function (req, res) {
-    console.log(req.body.favorite);
+    //console.log(req.body.favorite);
      User.findByIdAndUpdate(req.user._id, {$push:{"favorites": req.body.favorite}}, {upsert: true}, function (error, response) {
        if (error) {
          return res.status(500).send(error);
@@ -13,12 +13,12 @@ module.exports = {
   },
 
   getFavorites: function (req, res) {
-    console.log(req.body, 'favsss');
+    //console.log(req.body, 'favsss');
     Problem.find({_id: {$in: req.body.fav}})
     .populate('creator')
       .exec(function (error, response) {
-      console.log(response);
-      console.log(error, 'error');
+      //console.log(response);
+      //console.log(error, 'error');
       if (error) {
         return res.status(500).send(error);
       }

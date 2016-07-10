@@ -21,14 +21,14 @@ this.createNewProblem = function (prob) {
     data: prob
   })
   .then(function (response) {
-    console.log(response);
+    //console.log(response);
     return response.data;
   })
 }
 
 
 this.editProblem = function (problem) {
-  console.log('hit');
+  //console.log('hit');
   return $http({
     method: 'PUT',
     url: '/myprobs',
@@ -41,7 +41,7 @@ this.editProblem = function (problem) {
 
 
 this.deleteProblem = function (id) {
-  console.log('delete ser');
+  //console.log('delete ser');
   return $http({
     method: 'DELETE',
     url: '/myprobs/' + id

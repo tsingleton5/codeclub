@@ -4,9 +4,9 @@ angular.module("codeclub").controller("favCtrl", function($scope, favService, us
 
 
 $scope.getProblems = function () {
-  console.log(user.favorites);
+  //console.log(user.favorites);
   favService.getFavProbs(user.favorites).then(function (response) {
-    console.log(response);
+    //console.log(response);
     $scope.favorites = response;
   })
 }

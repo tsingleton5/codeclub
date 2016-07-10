@@ -24,7 +24,7 @@ $scope.addProblem = function (prob) {
 
 
 $scope.editProblem = function (problem) {
-  console.log('crtrl hit');
+  //console.log('crtrl hit');
   myprobsService.editProblem(problem).then(function (response) {
     $scope.getProblems(); // live updates
   })
@@ -35,7 +35,7 @@ $scope.editProblem = function (problem) {
 
 
 $scope.deleteProblem = function (id) {
-  console.log('delete ctrl');
+  //console.log('delete ctrl');
   myprobsService.deleteProblem(id).then(function (response) {
     $scope.getProblems();
   })

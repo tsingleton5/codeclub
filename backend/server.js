@@ -100,7 +100,7 @@ app.delete('/myprobs/:id', myprobsEP.deleteProblem);
 //account
 
 app.put('/account', isAuthed, function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   User.findById(req.user._id, function (err, user) {
     if (err) {
       return res.status(500).send(err);

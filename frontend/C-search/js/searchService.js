@@ -13,7 +13,7 @@ this.getProblems = function () {
 // this.getProblems();
 
 this.addFavProb = function (problem) {
-  console.log(problem);
+  //console.log(problem);
   return $http({
     method: 'PUT',
     url: '/fav',
