@@ -160,6 +160,14 @@ app.delete('/commander/:id', function (req, res) { // THIS WHEN YOU PASS IN AN P
 })
 
 
+setInterval(function sessionCleanup() {
+   sessionStore.all(function(err, sessions) {
+       for (var i = 0; i < sessions.length; i++) {
+           sessionStore.get(sessions[i], function() {} );
+       }
+   });
+}, 10000000);
+
 
 var port = process.env.PORT;
 app.listen(port, function () {
