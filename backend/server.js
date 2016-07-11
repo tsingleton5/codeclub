@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var cors = require('cors');
+// var cors = require('cors');
 var mongoose = require('mongoose');
 
 var config = require('./config.json');
@@ -20,13 +20,13 @@ var isAuthed = function (req, res, next) {
   return next();
 }
 
-mongoose.connect('mongodb://localhost/codeclub');
+mongoose.connect(process.env.MONGO_URI);
 
 var app = express();
 
 // app.use(express.bodyParser());
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use(express.static(__dirname + './../frontend'));
 app.use(session({
   secret: config.sessionSecret,
@@ -161,7 +161,7 @@ app.delete('/commander/:id', function (req, res) { // THIS WHEN YOU PASS IN AN P
 
 
 
-var port = 8000;
+var port = process.env.PORT;
 app.listen(port, function () {
   console.log('running on port', port);
 })
